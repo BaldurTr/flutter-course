@@ -14,10 +14,12 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        theme: ThemeData(
+            primarySwatch: Colors.deepOrange, accentColor: Colors.deepPurple),
         home: Scaffold(
             appBar: AppBar(
               title: Text('EasyList'),
             ),
-            body: ProductManager()));
+            body: ProductManager('Betka')));
   }
 }
