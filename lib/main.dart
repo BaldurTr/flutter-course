@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course/product_manager.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyAppState();
+  }
+}
+
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -10,22 +18,6 @@ class MyApp extends StatelessWidget {
             appBar: AppBar(
               title: Text('EasyList'),
             ),
-            body: Column(children: [
-              Container(
-                margin: EdgeInsets.all(10.0),
-                child: RaisedButton(
-                  child: Text('Add product'),
-                  onPressed: () {},
-                ),
-              ),
-              Card(
-                child: Column(
-                  children: <Widget>[
-                    Image.asset('assets/food.jpg'),
-                    Text('Food Paradise')
-                  ],
-                ),
-              )
-            ])));
+            body: ProductManager()));
   }
 }
